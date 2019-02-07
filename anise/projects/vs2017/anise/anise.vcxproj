@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{FC4CFA22-ECA4-465F-AE28-E685406FCD3F}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>anise</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>E:\MYWORK\Projects\anise\anise\external\prebuilt\SDL-1.2.15\include;$(IncludePath)</IncludePath>
+    <LibraryPath>E:\MYWORK\Projects\anise\anise\external\prebuilt\SDL-1.2.15\lib\x86\debug;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>D:\workspace\anise\external\SDL-1.2.15\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <AdditionalLibraryDirectories>D:\workspace\anise\external\prebuilt\SDL-1.2.15\lib\x86\debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies);SDLmain.lib;SDL.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\animation.cpp" />
+    <ClCompile Include="..\..\..\dialogue.cpp" />
+    <ClCompile Include="..\..\..\dialogue_gamebox.cpp" />
+    <ClCompile Include="..\..\..\dialogue_jis.cpp" />
+    <ClCompile Include="..\..\..\dialogue_jishan.cpp" />
+    <ClCompile Include="..\..\..\dialogue_sagwa.cpp" />
+    <ClCompile Include="..\..\..\engine.cpp" />
+    <ClCompile Include="..\..\..\field.cpp" />
+    <ClCompile Include="..\..\..\field_move.cpp" />
+    <ClCompile Include="..\..\..\field_path.cpp" />
+    <ClCompile Include="..\..\..\file.cpp" />
+    <ClCompile Include="..\..\..\image.cpp" />
+    <ClCompile Include="..\..\..\input.cpp" />
+    <ClCompile Include="..\..\..\main.cpp" />
+    <ClCompile Include="..\..\..\memory.cpp" />
+    <ClCompile Include="..\..\..\memory_block.cpp" />
+    <ClCompile Include="..\..\..\memory_segment.cpp" />
+    <ClCompile Include="..\..\..\mfile.cpp" />
+    <ClCompile Include="..\..\..\op4_blitdirect.cpp" />
+    <ClCompile Include="..\..\..\op4_blitmasked.cpp" />
+    <ClCompile Include="..\..\..\op4_blitswapped.cpp" />
+    <ClCompile Include="..\..\..\op4_break.cpp" />
+    <ClCompile Include="..\..\..\op4_callscript.cpp" />
+    <ClCompile Include="..\..\..\op4_changeslot.cpp" />
+    <ClCompile Include="..\..\..\op4_checkclick.cpp" />
+    <ClCompile Include="..\..\..\op4_continue.cpp" />
+    <ClCompile Include="..\..\..\op4_displayselection.cpp" />
+    <ClCompile Include="..\..\..\op4_drawinversebox.cpp" />
+    <ClCompile Include="..\..\..\op4_drawsolidbox.cpp" />
+    <ClCompile Include="..\..\..\op4_dummy.cpp" />
+    <ClCompile Include="..\..\..\op4_field.cpp" />
+    <ClCompile Include="..\..\..\op4_initializeselection.cpp" />
+    <ClCompile Include="..\..\..\op4_jumpscript.cpp" />
+    <ClCompile Include="..\..\..\op4_loadfile.cpp" />
+    <ClCompile Include="..\..\..\op4_loadimage.cpp" />
+    <ClCompile Include="..\..\..\op4_manipulateflag.cpp" />
+    <ClCompile Include="..\..\..\op4_mouse.cpp" />
+    <ClCompile Include="..\..\..\op4_palette.cpp" />
+    <ClCompile Include="..\..\..\op4_sound.cpp" />
+    <ClCompile Include="..\..\..\op4_while.cpp" />
+    <ClCompile Include="..\..\..\option.cpp" />
+    <ClCompile Include="..\..\..\oput_dummy.cpp" />
+    <ClCompile Include="..\..\..\oput_overlapscreen.cpp" />
+    <ClCompile Include="..\..\..\oput_sprayscreen.cpp" />
+    <ClCompile Include="..\..\..\oput_swapscreen.cpp" />
+    <ClCompile Include="..\..\..\oput_unpackaniheader.cpp" />
+    <ClCompile Include="..\..\..\op_animate.cpp" />
+    <ClCompile Include="..\..\..\op_call.cpp" />
+    <ClCompile Include="..\..\..\op_callprocedure.cpp" />
+    <ClCompile Include="..\..\..\op_clearscreen.cpp" />
+    <ClCompile Include="..\..\..\op_defineprocedure.cpp" />
+    <ClCompile Include="..\..\..\op_delay.cpp" />
+    <ClCompile Include="..\..\..\op_displaynumber.cpp" />
+    <ClCompile Include="..\..\..\op_if.cpp" />
+    <ClCompile Include="..\..\..\op_makearray.cpp" />
+    <ClCompile Include="..\..\..\op_makebytearray.cpp" />
+    <ClCompile Include="..\..\..\op_null.cpp" />
+    <ClCompile Include="..\..\..\op_saveconstant.cpp" />
+    <ClCompile Include="..\..\..\op_saveexpression.cpp" />
+    <ClCompile Include="..\..\..\op_setbasevariable.cpp" />
+    <ClCompile Include="..\..\..\op_setcolor.cpp" />
+    <ClCompile Include="..\..\..\op_setdialoguecolor.cpp" />
+    <ClCompile Include="..\..\..\op_utility.cpp" />
+    <ClCompile Include="..\..\..\op_wait.cpp" />
+    <ClCompile Include="..\..\..\script.cpp" />
+    <ClCompile Include="..\..\..\script_opre.cpp" />
+    <ClCompile Include="..\..\..\script_parameter.cpp" />
+    <ClCompile Include="..\..\..\script_stack.cpp" />
+    <ClCompile Include="..\..\..\script_value.cpp" />
+    <ClCompile Include="..\..\..\sound.cpp" />
+    <ClCompile Include="..\..\..\timer.cpp" />
+    <ClCompile Include="..\..\..\video.cpp" />
+    <ClCompile Include="..\..\..\ymf262.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\animation.h" />
+    <ClInclude Include="..\..\..\anise.h" />
+    <ClInclude Include="..\..\..\debug.h" />
+    <ClInclude Include="..\..\..\dialogue.h" />
+    <ClInclude Include="..\..\..\engine.h" />
+    <ClInclude Include="..\..\..\field.h" />
+    <ClInclude Include="..\..\..\file.h" />
+    <ClInclude Include="..\..\..\image.h" />
+    <ClInclude Include="..\..\..\input.h" />
+    <ClInclude Include="..\..\..\memory.h" />
+    <ClInclude Include="..\..\..\memory_block.h" />
+    <ClInclude Include="..\..\..\memory_index.h" />
+    <ClInclude Include="..\..\..\memory_segment.h" />
+    <ClInclude Include="..\..\..\mfile.h" />
+    <ClInclude Include="..\..\..\option.h" />
+    <ClInclude Include="..\..\..\resource.h" />
+    <ClInclude Include="..\..\..\script.h" />
+    <ClInclude Include="..\..\..\script_code.h" />
+    <ClInclude Include="..\..\..\script_parameter.h" />
+    <ClInclude Include="..\..\..\script_stack.h" />
+    <ClInclude Include="..\..\..\sound.h" />
+    <ClInclude Include="..\..\..\timer.h" />
+    <ClInclude Include="..\..\..\video.h" />
+    <ClInclude Include="..\..\..\ymf262.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
